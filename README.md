@@ -8,7 +8,6 @@ Let's say there are 100 question from a chapter. Doing all the question from 1,2
 
 ```bash=
 Enter number of quesitons: 10
-question_done[0]: 0
 1. 7
 2. 5
 3. 10
@@ -18,7 +17,7 @@ question_done[0]: 0
 7. 2
 8. 4
 9. 8
-10. 125
+10. 1
 ```
 
 ## Logic
