@@ -2,25 +2,33 @@
 
 int previous_prime(int num);
 bool isPrime(int num);
+void show_completed();
+bool *question_done;
+int n;
 
 int main()
 {
-    int n;
     std::cout << "Enter number of quesitons: ";
     std::cin >> n;
-    bool *question_done = new bool[n]{false};
+    question_done = new bool[n]{false};
     int serial_number = 0;
 
     for (int prime = previous_prime(n); prime >= 1; prime = previous_prime(prime))
     {
         int next_question = prime;
         for (int i = 1; next_question <= n; next_question = prime * ++i)
-            if (question_done[next_question - 1] == false)
+        {
+            if (!question_done[next_question - 1])
             {
-                std::cout << ++serial_number << ". " << next_question << std::endl;
+                getchar();
+                show_completed();
+                std::cout << ++serial_number << ". Current: " << next_question;
                 question_done[next_question - 1] = true;
             }
+        }
     }
+    std::cout << "\n\nCompleted all questions. Press any key to exit...";
+    getchar();
 }
 
 int previous_prime(int num)
@@ -41,4 +49,19 @@ bool isPrime(int num)
         if (num % i == 0)
             return false;
     return true;
+}
+
+void show_completed()
+{
+    std::cout << "\nCompleted:\n";
+    for (int i = 0; i < n; i++)
+    {
+        if (question_done[i])
+            std::cout << i + 1 << "\t";
+        else
+            std::cout << "_\t";
+        if ((i + 1) % 10 == 0)
+            std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
