@@ -9,7 +9,6 @@ int main()
     std::cout << "Enter number of quesitons: ";
     std::cin >> n;
     bool *question_done = new bool[n]{false};
-    std::cout << "question_done[0]: " << question_done[0] << std::endl;
     int serial_number = 0;
 
     for (int prime = previous_prime(n); prime >= 1; prime = previous_prime(prime))
