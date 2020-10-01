@@ -7,17 +7,31 @@ Let's say there are 100 question from a chapter. Doing all the question from 1,2
 ## Sample outupt
 
 ```bash=
-Enter number of quesitons: 10
-1. 7
-2. 5
-3. 10
-4. 3
-5. 6
-6. 9
-7. 2
-8. 4
-9. 8
-10. 1
+Enter number of quesitons: 20
+
+Completed:
+_	_	_	_	_	_	_	_	_	_	
+_	_	_	_	_	_	_	_	_	_	
+
+1. Current: 19
+
+Completed:
+_	_	_	_	_	_	_	_	_	_	
+_	_	_	_	_	_	_	_	19	_	
+
+2. Current: 17
+
+Completed:
+_	_	_	_	_	_	_	_	_	_	
+_	_	_	_	_	_	17	_	19	_	
+
+3. Current: 13
+
+Completed:
+_	_	_	_	_	_	_	_	_	_	
+_	_	13	_	_	_	17	_	19	_	
+
+4. Current: 11
 ```
 
 ## Logic
